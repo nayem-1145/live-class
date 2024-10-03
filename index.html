@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Class</title>
+
+    <!--external stylesheet-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="live_class_screen position-relative z-1">
+            <span class="lv_circle_half_yellow position-absolute z--1"></span>
+            <span class="lv_circle_half_light_blue position-absolute z--1"></span>
+            <img src="assets/images/shapes/close-outline.svg" alt="close" class="lv_close_outline position-absolute z--1">
+            <img src="assets/images/shapes/circle-repeat.svg" alt="circle" class="lv_circle_repeat position-absolute z--1">
+            <img src="assets/images/shapes/doted-white.svg" alt="dotted-white" class="lv_dotted_white position-absolute z--1">
+            <img src="assets/images/shapes/circle-dotted.svg" class="lv_dotted_circle position-absolute z--1">
+            <img src="assets/images/shapes/yellow-plus.svg" class="lv_plus_shape position-absolute z--1">
+            <img src="assets/images/shapes/yellow-doted.svg" class="lv_yellow_dotted position-absolute z--1">
+            <img src="assets/images/shapes/cube-white.svg" class="lv_cube_shape position-absolute z--1">
+            <img src="assets/images/shapes/close-outline-sm.svg" class="lv_close_sm position-absolute z--1" alt="close">
+            <span class="lv_circle_sm position-absolute z--1"></span>
+            <span class="lv_square_sm position-absolute z--1"></span>
+        
+            <!--hub component start-->
+            <div class="hub_component">
+                <a href="#" class="hb_info_btn">
+                    <img src="assets/images/icons/bulb.svg" alt="bulb" class="img-fluid">
+                </a>
+                <div class="hb_objective_content">
+                    <div>
+                        <h3>Objective (1/<small>5</small>): <mark>Welcome Class</mark></h3>
+                        <p class="mb-0">Be sure to check that each student is in attendance and give a brief summary of the lesson.</p>
+                    </div>
+                    <div class="hb_object_checkbox">
+                        <label>
+                            <input type="checkbox">
+                            <span>
+                                <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.44434 8.00003L7.55545 14.1111L19.7777 1.88892" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </span><br>
+                            Done?
+                        </label>
+                    </div>
+                </div>
+                <div class="hb_object_time">
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="clock_icon">
+                            <img src="assets/images/icons/clock.svg" alt="clock" class="clock_icon img-fluid">
+                        </span>
+                        <ul class="hub_countdown">
+                            <li class="minutes">00</li>
+                            <li class="seperator">:</li>
+                            <li class="seconds">01</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0 text-center">Objective time</p>
+                </div>
+                <div class="hb_lesson_time">
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="clock_icon">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 22.75C18.3848 22.75 22.75 18.3848 22.75 13C22.75 7.61522 18.3848 3.25 13 3.25C7.61522 3.25 3.25 7.61522 3.25 13C3.25 18.3848 7.61522 22.75 13 22.75Z" stroke="#342E59" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M13 7.3125V13H18.6875" stroke="#342E59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <ul class="hub_countdown">
+                            <li class="minutes">58</li>
+                            <li class="seperator">:</li>
+                            <li class="seconds">23</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0 text-center">Total lesson time</p>
+                </div>
+
+                <button class="hb_close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.65279 0.916454C2.46159 0.738292 2.2087 0.641299 1.9474 0.645909C1.68609 0.650519 1.43678 0.756373 1.25199 0.94117C1.06719 1.12597 0.961336 1.37528 0.956726 1.63658C0.952115 1.89788 1.04911 2.15077 1.22727 2.34197L6.23003 7.34473L1.22727 12.3475C1.12817 12.4398 1.04869 12.5512 0.993566 12.6749C0.938438 12.7986 0.908796 12.9322 0.906407 13.0676C0.904018 13.203 0.92893 13.3376 0.979658 13.4632C1.03039 13.5887 1.10589 13.7028 1.20167 13.7986C1.29744 13.8944 1.41153 13.9699 1.53712 14.0206C1.66271 14.0713 1.79724 14.0963 1.93266 14.0939C2.06809 14.0915 2.20165 14.0618 2.32537 14.0067C2.4491 13.9516 2.56045 13.8721 2.65279 13.773L7.65555 8.77025L12.6583 13.773C12.7506 13.8721 12.862 13.9516 12.9857 14.0067C13.1094 14.0618 13.243 14.0915 13.3784 14.0939C13.5139 14.0963 13.6484 14.0713 13.774 14.0206C13.8996 13.9699 14.0136 13.8944 14.1094 13.7986C14.2052 13.7028 14.2807 13.5887 14.3314 13.4632C14.3822 13.3376 14.4071 13.203 14.4047 13.0676C14.4023 12.9322 14.3727 12.7986 14.3175 12.6749C14.2624 12.5512 14.1829 12.4398 14.0838 12.3475L9.08107 7.34473L14.0838 2.34197C14.262 2.15077 14.359 1.89788 14.3544 1.63658C14.3498 1.37528 14.2439 1.12597 14.0591 0.94117C13.8743 0.756373 13.625 0.650519 13.3637 0.645909C13.1024 0.641299 12.8495 0.738292 12.6583 0.916454L7.65555 5.91921L2.65279 0.916454Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+            <!--hub component end-->
+
+
+            <!--content wrap start-->
+            <section class="lv_content_wrapper">
+                <div class="logo_wrapper text-center">
+                    <a href="index.html"><img src="assets/images/logo.svg" alt="logo" class="img-fluid"></a>
+                </div>
+                <div class="lv_auto_slider">
+                    
+                    <div>
+                        <div class="lv_slide_single">
+                            <div class="lv_animated_icon">
+                                <img src="assets/images/icons/git.gif" alt="icon" class="img-fluid">
+                            </div>
+                            <h2>Are you ready to lean today?</h2>
+                            <p>Today's topic is</p>
+                            <h1>Algebra</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lv_slide_single">
+                            <div class="lv_animated_icon">
+                                <img src="assets/images/icons/git.gif" alt="icon" class="img-fluid">
+                            </div>
+                            <h2>Check your mic is on <br> and internet connection is good</h2>
+                            <p>It's important that you can be heard.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lv_slide_single">
+                            <div class="lv_animated_icon">
+                                <img src="assets/images/icons/git.gif" alt="icon" class="img-fluid">
+                            </div>
+                            <h2>Dont be shy to tell the tutor if you<br> dont understand something.</h2>
+                            <p>Enjoy the lesson</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!--content wrap end-->
+        
+        
+        </div>
+
+    </main>
+
+
+    <!--essential scripts-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>
