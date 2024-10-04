@@ -5,12 +5,12 @@
     //skeleton loader
     $(window).on("load", function(){
         setTimeout(function(){
-            $(".skeleton").addClass("off");
+            $(".loading").addClass("off");
             setTimeout(function(){
-                $(".skeleton").addClass("hide_element");
+                $(".loading").addClass("hide_element");
             }, 1000); 
         
-        }, 2000);
+        }, 1500);
     });
 
     // slider component

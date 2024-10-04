@@ -13,6 +13,7 @@ version: 1.0.0
   --color-light-blue: #ACEED6;
   --heading-color: #342E59;
   --btn-color: #25FE5B;
+  --loading-grey: #ededed;
   --primary-font: "Poppins", system-ui; }
 
 /* essential fonts **/
@@ -109,9 +110,9 @@ h1, h2, h3 {
     right: 80px;
     top: 60%; }
 
-.skeleton {
+.loading {
   position: relative; }
-  .skeleton::after {
+  .loading::after {
     content: '';
     background: #dddddd;
     position: absolute;
@@ -124,7 +125,7 @@ h1, h2, h3 {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
-  .skeleton::before {
+  .loading::before {
     content: '';
     position: absolute;
     left: 0;
@@ -137,11 +138,11 @@ h1, h2, h3 {
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
     z-index: 1000;
     opacity: 1;
-    -webkit-animation: shimmer 1.5s infinite;
-    animation: shimmer 1.5s infinite; }
-  .skeleton.off::before, .skeleton.off::after {
+    -webkit-animation: shimmer .8s infinite;
+    animation: shimmer .8s infinite; }
+  .loading.off::before, .loading.off::after {
     opacity: 0; }
-  .skeleton.hide_element::before, .skeleton.hide_element::after {
+  .loading.hide_element::before, .loading.hide_element::after {
     display: none; }
 
 .hub_component {
