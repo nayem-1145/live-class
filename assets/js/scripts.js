@@ -1,6 +1,18 @@
 (function ($) {
 
 
+
+    //skeleton loader
+    $(window).on("load", function(){
+        setTimeout(function(){
+            $(".skeleton").addClass("off");
+            setTimeout(function(){
+                $(".skeleton").addClass("hide_element");
+            }, 1000); 
+        
+        }, 2000);
+    });
+
     // slider component
     $(".lv_auto_slider").slick({
         slidesToShow: 1,
@@ -9,6 +21,14 @@
         speed: 700,
         arrows: false,
         fade: true,
+    });
+
+    //hub countdown timer
+    $(".hub_countdown").each(function () {
+        var $data_date = $(this).data('date');
+        $(this).countdown({
+          date: $data_date
+        });
     });
 
 
