@@ -12,6 +12,7 @@ version: 1.0.0
   --color-yellow: #FBF239;
   --color-light-blue: #ACEED6;
   --heading-color: #342E59;
+  --btn-color: #25FE5B;
   --primary-font: "Poppins", system-ui; }
 
 /* essential fonts **/
@@ -203,6 +204,10 @@ h1, h2, h3 {
     .hub_component .hb_objective_content p {
       color: var(--color-white);
       font-size: 0.9vw; }
+  .hub_component.state-1 .hb_objective_content h3, .hub_component.state-1 .hb_objective_content p, .hub_component.state-1 .hb_objective_content .hb_object_checkbox {
+    opacity: 0; }
+  .hub_component.state-1 .hb_object_time div, .hub_component.state-1 .hb_object_time p {
+    opacity: 0; }
 
 .hb_object_checkbox {
   -webkit-transform: translateY(8px);
@@ -366,6 +371,35 @@ h1, h2, h3 {
     color: var(--color-white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 0; }
+
+.lv_state_2_content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .lv_state_2_content h2 {
+    font-size: 2.5vw;
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3vw; }
+  .lv_state_2_content .lv_join_btn {
+    padding: 12px 7.5vw;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: var(--color-white);
+    border-radius: 20px;
+    text-align: center;
+    background: var(--btn-color);
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .lv_state_2_content .lv_join_btn:hover {
+      background: var(--heading-color); }
 
 /* responsive styles */
 @media (max-width: 1600px) {
