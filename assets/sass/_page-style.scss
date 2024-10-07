@@ -384,11 +384,7 @@
         background: var(--color-red);
 
         i {
-            color: var(--color-black);
-            font-weight: 600;
-            font-size: 14px;
-            top: 1px;
-            position: relative;
+            color: var(--color-white);
         }
     }
 }
@@ -644,14 +640,14 @@ $size: 62px;
         }
 
         .hb_objective_content {
-            padding: 6px 15px 12px;
+            padding: 9px 15px 9px;
 
             h3 {
-                font-size: 2vw;
+                font-size: 1.7vw;
             }
 
             p {
-                font-size: 1.2vw;
+                font-size: 1.1vw;
                 width: 38vw;
                 white-space: nowrap;
                 overflow: hidden;
@@ -788,12 +784,6 @@ $size: 62px;
 
     .hub_component .hb_objective_content p {
         font-size: 18px;
-    }
-
-    .hb_lesson_time::after {
-        content: '';
-        top: -15px;
-        height: 74px;
     }
 }
 
@@ -1056,6 +1046,7 @@ $size: 62px;
         .hb_lesson_time {
             padding: 13px 11vw 7px;
         }
+
         .hb_objective_content p {
             width: 55vw;
         }
