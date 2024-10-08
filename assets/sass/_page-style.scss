@@ -8,7 +8,7 @@
 
 .live_class_screen {
     overflow-x: hidden;
-    background: var(--primary-color);
+    background: var(--loading-grey);
     width: 100%;
     height: 100vh;
 
@@ -474,7 +474,7 @@
 // Timer Progress 
 $frameColor: slategrey;
 $buttonColor: slategrey;
-$ringColor: #342E59;
+$ringColor: rgb(219, 238, 252);
 $progressColor: #3822F1;
 $lapTime: var(--lapTime);
 $infiniteLoop: true;
@@ -501,19 +501,19 @@ $size: 62px;
             animation-iteration-count: infinite;
         }
 
-        box-shadow: 0 0 (0.02*$size) 0 $ringColor;
+        box-shadow: 0 0 (0.02*$size) 0 var(--heading-color);
     }
 
     .ring {
         position: absolute;
         top: (0.12*$size);
         left: (0.10*$size);
-        border: (0.06*$size) solid $ringColor;
+        border: (0.06*$size) solid var(--heading-color);
         width: (0.80*$size);
         height: (0.80*$size);
         border-radius: 50%;
         z-index: 500;
-        box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
+        box-shadow: inset 0 0 (0.03*$size) 0 var(--heading-color);
     }
 
     .pie {
@@ -524,7 +524,7 @@ $size: 62px;
         height: (0.90*$size);
         border-radius: 50%;
         border: (0.1*$size) solid $frameColor;
-        box-shadow: 0 0 (0.03*$size) 0 $ringColor;
+        box-shadow: 0 0 (0.03*$size) 0 var(--heading-color);
     }
 
     .pie::before {
@@ -543,6 +543,25 @@ $size: 62px;
     }
 
     .pie1::before {
+        background-color: $ringColor;
+        transform: rotate(1turn);
+        animation: spin1 calc($lapTime/2) linear;
+
+        @if $infiniteLoop==true {
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .pie1::after {
+        content: '';
+        left: -0.2px;
+        top: calc(-100% - (0.005*$size));
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        transform-origin: left;
+        position: relative;
         background-color: $ringColor;
         transform: rotate(1turn);
         animation: spin1 calc($lapTime/2) linear;
@@ -602,6 +621,7 @@ $size: 62px;
         0% {
             background-color: $progressColor;
         }
+
         100% {
             background-color: $progressColor;
         }
@@ -636,14 +656,14 @@ $size: 62px;
         }
 
         .hb_objective_content {
-            padding: 9px 15px 9px;
+            padding: 6px 15px 8px;
 
             h3 {
-                font-size: 1.7vw;
+                font-size: 1.4vw;
             }
 
             p {
-                font-size: 1.1vw;
+                font-size: 0.9vw;
                 width: 38vw;
                 white-space: nowrap;
                 overflow: hidden;
@@ -653,21 +673,40 @@ $size: 62px;
 
     }
 
+    .hb_close {
+        width: 1.8vw;
+        height: 1.8vw;
+
+        i {
+            font-size: 11px;
+        }
+    }
+
     .hb_object_checkbox label {
         font-size: 12px;
     }
 
     .hb_object_checkbox label span {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
 
     .hb_object_checkbox label span svg {
         transform: scale(0.8);
     }
 
+    .hb_lesson_time .hub_countdown li {
+        font-size: 1.25vw;
+    }
+
+    .hb_lesson_time .clock_icon {
+        svg {
+            width: 20px;
+        }
+    }
+
     .hub_countdown li {
-        font-size: 28px;
+        font-size: 1.9vw;
     }
 
     .hb_object_time {
@@ -695,19 +734,25 @@ $size: 62px;
     }
 
     .hb_lesson_time>p {
+        font-size: 14px;
         margin-top: 0;
     }
 
     .hb_lesson_time {
-        padding: 13px 2vw 9px;
+        padding: 12px 2vw 8px;
     }
+
     .hb_object_checkbox {
         transform: translateY(5px);
     }
 
+    .hb_object_timer p {
+        font-size: 14px;
+    }
+
     // timer Pregress 
-    $size: 46px;
-    $ringColor: #342E59;
+    $size: 38px;
+    $ringColor: rgb(219, 238, 252);
     $progressColor: #3822F1;
 
     #stopwatch {
@@ -720,17 +765,17 @@ $size: 62px;
             left: (0.38*$size);
             width: (0.24*$size);
             height: (0.10*$size);
-            box-shadow: 0 0 (0.02*$size) 0 $ringColor;
+            box-shadow: 0 0 (0.02*$size) 0 var(--heading-color);
         }
 
         .ring {
             position: absolute;
             top: (0.135*$size);
             left: (0.11*$size);
-            border: (0.06*$size) solid $ringColor;
+            border: (0.06*$size) solid var(--heading-color);
             width: (0.78*$size);
             height: (0.78*$size);
-            box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
+            box-shadow: inset 0 0 (0.03*$size) 0 var(--heading-color);
         }
 
         .pie {
@@ -741,7 +786,7 @@ $size: 62px;
             height: (0.90*$size);
             border-radius: 50%;
             border: (0.1*$size) solid $frameColor;
-            box-shadow: 0 0 (0.03*$size) 0 $ringColor;
+            box-shadow: 0 0 (0.03*$size) 0 var(--heading-color);
         }
 
         @keyframes pressure {
@@ -798,14 +843,14 @@ $size: 62px;
         }
 
         .hb_objective_content {
-            padding: 8px 15px 10px;
+            padding: 6px 15px 8px;
 
             h3 {
-                font-size: 1.8vw;
+                font-size: 1.6vw;
             }
 
             p {
-                font-size: 1.2vw;
+                font-size: 1.1vw;
                 width: 38vw;
                 white-space: nowrap;
                 overflow: hidden;
@@ -815,7 +860,7 @@ $size: 62px;
     }
 
     .hb_object_checkbox {
-        transform: translateY(6px);
+        transform: translateY(4px);
     }
 
     .hb_close {
@@ -834,7 +879,7 @@ $size: 62px;
         }
 
         .hb_objective_content {
-            padding: 5px 10px 13px;
+            padding: 5px 10px 9px;
 
             h3 {
                 font-size: 2.1vw;
@@ -849,10 +894,17 @@ $size: 62px;
             }
         }
 
+        .hb_lesson_time .hub_countdown li {
+            font-size: 1.6vw;
+        }
+
+        .hub_countdown li {
+            font-size: 2.4vw;
+        }
 
         // timer Pregress 
-        $size: 42px;
-        $ringColor: #342E59;
+        $size: 38px;
+        $ringColor: rgba(52, 46, 89, 0.1);
 
         #stopwatch {
             width: $size;
@@ -864,17 +916,17 @@ $size: 62px;
                 left: (0.38*$size);
                 width: (0.24*$size);
                 height: (0.10*$size);
-                box-shadow: 0 0 (0.02*$size) 0 $ringColor;
+                box-shadow: 0 0 (0.02*$size) 0 var(--heading-color);
             }
 
             .ring {
                 position: absolute;
-                top: (0.12*$size);
-                left: (0.10*$size);
-                border: (0.06*$size) solid $ringColor;
-                width: (0.80*$size);
-                height: (0.80*$size);
-                box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
+                top: (0.14*$size);
+                left: (0.11*$size);
+                border: (0.07*$size) solid var(--heading-color);
+                width: (0.77*$size);
+                height: (0.77*$size);
+                box-shadow: inset 0 0 (0.03*$size) 0 var(--heading-color);
             }
 
             .pie {
@@ -884,8 +936,8 @@ $size: 62px;
                 width: (0.90*$size);
                 height: (0.90*$size);
                 border-radius: 50%;
-                border: (0.1*$size) solid $frameColor;
-                box-shadow: 0 0 (0.03*$size) 0 $ringColor;
+                border: (0.15*$size) solid $frameColor;
+                box-shadow: 0 0 (0.03*$size) 0 var(--heading-color);
             }
 
             @keyframes pressure {
@@ -915,7 +967,7 @@ $size: 62px;
 
     .hb_object_time .clock_icon {
         width: 57px;
-        padding: 16px 10px 16px 7px;
+        padding: 14px 10px 14px 7px;
     }
 }
 
@@ -931,17 +983,17 @@ $size: 62px;
         }
 
         .hb_lesson_time>p {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .hb_lesson_time .clock_icon {
             svg {
-                width: 22px;
+                width: 20px;
             }
         }
 
         .hb_lesson_time .hub_countdown li {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         .hb_object_checkbox label span {
@@ -950,11 +1002,11 @@ $size: 62px;
         }
 
         .hb_objective_content h3 {
-            font-size: 2.6vw;
+            font-size: 2.4vw;
         }
 
         .hb_object_time .clock_icon {
-            padding: 13px 10px 14px 7px;
+            padding: 14px 10px 14px 7px;
         }
 
         .hb_objective_content p {
@@ -963,11 +1015,11 @@ $size: 62px;
         }
 
         .hb_objective_content {
-            padding: 5px 10px 10px;
+            padding: 4px 10px 8px;
         }
 
         .hb_lesson_time {
-            padding: 13px 2vw 7px;
+            padding: 12px 2vw 6px;
         }
 
         .hb_close {
