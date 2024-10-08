@@ -275,8 +275,6 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   padding: 7px 10px;
-  background: -webkit-radial-gradient(rgb(245, 255, 236), rgb(219, 238, 252));
-  background: radial-gradient(rgb(245, 255, 236), rgb(219, 238, 252));
 }
 .hb_object_time .clock_icon img {
   width: 66px;
@@ -591,7 +589,7 @@ h1, h2, h3 {
     width: 20px;
   }
   .hub_countdown li {
-    font-size: 1.9vw;
+    font-size: 1.7vw;
   }
   .hb_object_time {
     min-width: 220px;
