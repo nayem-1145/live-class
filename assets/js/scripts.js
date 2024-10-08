@@ -58,7 +58,10 @@
     });
 
     
-
+    document.querySelectorAll('.stopwElement').forEach(function (element) {
+        const fontSize = element.getAttribute('data-progress');
+        element.style.setProperty('--lapTime', fontSize);
+    });
 
 
 })(jQuery)
