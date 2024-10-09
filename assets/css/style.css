@@ -849,6 +849,9 @@ h1, h2, h3 {
   .hb_object_timer {
     display: none;
   }
+  .hb_lesson_time {
+    min-width: 120px;
+  }
   .hub_component .hb_object_time {
     min-width: unset;
     padding: 0;
