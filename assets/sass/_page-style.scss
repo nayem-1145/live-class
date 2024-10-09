@@ -169,7 +169,7 @@
 
     .hbfonts-light-bulb {
         width: 90px;
-        padding: 10px;
+        padding: 14px 10px;
         -ms-flex-negative: 0;
         flex-shrink: 0;
         display: -webkit-inline-box;
@@ -188,7 +188,7 @@
         transition: 0.3s;
 
         &:focus {
-            color: var(--color-yellow);
+            color: var(--color-yellow2);
         }
     }
 
@@ -429,6 +429,10 @@
     align-self: center;
     border: 0;
     left: .5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     i {
         font-size: 13px;
@@ -758,22 +762,23 @@ $size: 62px;
     .hub_component {
 
         .hbfonts-light-bulb {
-            width: 70px;
-            padding: 12px;
-            height: 62px;
-            font-size: 30px;
+            width: 58px;
+            padding: 10px 12px;
+            height: 56px;
+            font-size: 28px;
+
         }
 
         .hb_objective_content {
-            padding: 10px 12px 4px;
+            padding: 4px 10px 2px;
             align-items: center;
 
             h3 {
-                font-size: 1.4vw;
+                font-size: 1.28vw;
             }
 
             p {
-                font-size: 0.9vw;
+                font-size: 0.85vw;
                 width: 38vw;
                 white-space: nowrap;
                 overflow: hidden;
@@ -784,11 +789,11 @@ $size: 62px;
     }
 
     .hb_close {
-        width: 1.8vw;
-        height: 1.8vw;
+        width: 1.7vw;
+        height: 1.7vw;
 
         i {
-            font-size: 11px;
+            font-size: 10px;
         }
     }
 
@@ -797,8 +802,9 @@ $size: 62px;
     }
 
     .hb_object_checkbox label span {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 2px;
     }
 
     .hb_object_checkbox label span svg {
@@ -807,22 +813,23 @@ $size: 62px;
     }
 
     .hb_lesson_time .hub_countdown li {
-        font-size: 1.25vw;
+        font-size: 1.15vw;
     }
 
     .hb_lesson_time .clock_icon {
         svg {
-            width: 20px;
+            width: 18px;
+            height: 18px;
         }
     }
 
     .hub_countdown li {
-        font-size: 1.7vw;
+        font-size: 1.5vw;
     }
 
     .hb_object_time {
 
-        min-width: 220px;
+        min-width: 195px;
         padding: 0 2vw 0 0;
 
         .hub_countdown {
@@ -831,8 +838,8 @@ $size: 62px;
         }
 
         .clock_icon {
-            width: 62px;
-            padding: 14px 8px 11px 8px;
+            width: 52px;
+            padding: 11px 8px 9px 8px;
 
             img {
                 width: 36px;
@@ -840,30 +847,27 @@ $size: 62px;
         }
     }
 
-    .hb_object_time>p {
-        font-size: 16px;
-    }
-
     .hb_lesson_time>p {
-        font-size: 14px;
+        font-size: 0.85vw;
         margin-top: 0;
     }
 
     .hb_lesson_time {
-        padding: 14px 2vw 9px;
+        padding: 8px 2vw 5px;
     }
 
     .hb_object_checkbox {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
     }
 
     .hb_object_timer p {
-        font-size: 14px;
+        font-size: 0.85vw;
+        margin-top: -2px;
     }
 
     // stopWatch 
-    $size: 44px;
+    $size: 36px;
 
     #stopwatch {
         margin: 0;
@@ -890,10 +894,10 @@ $size: 62px;
         .ring {
             position: absolute;
             top: 5.53px;
-            left: 4.6px;
+            left: 4.95px;
             border: 3px solid $ringColor;
-            width: (0.79*$size);
-            height: (0.79*$size);
+            width: (0.73*$size);
+            height: (0.73*$size);
             box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
         }
 
@@ -968,12 +972,6 @@ $size: 62px;
 }
 
 @media(max-width: 1366px) {
-    .hub_component {
-        .hbfonts-light-bulb {
-            width: 64px;
-        }
-    }
-
     .hb_lesson_time .hub_countdown li {
         font-size: 1.5vw;
     }
@@ -1004,11 +1002,11 @@ $size: 62px;
 @media(max-width: 1199px) {
     .hub_component {
         .hb_objective_content h3 {
-            font-size: 2.3vw;
+            font-size: 1.9vw;
         }
 
         .hb_objective_content p {
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .hb_object_time {
@@ -1037,84 +1035,7 @@ $size: 62px;
         }
     }
 
-    // stopWatch 
-    $size: 40px;
-
-    #stopwatch {
-        margin: 0;
-        width: $size;
-        height: $size;
-
-        .switch {
-            position: absolute;
-            left: (0.38*$size);
-            width: (0.24*$size);
-            height: (0.10*$size);
-            background-color: $buttonColor;
-            -webkit-animation: pressure $lapTime ease-out;
-            animation: pressure $lapTime ease-out;
-
-            @if $infiniteLoop==true {
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-            }
-
-            box-shadow: 0 0 (0.02*$size) 0 $ringColor;
-        }
-
-        .ring {
-            position: absolute;
-            top: 5.53px;
-            left: 4.6px;
-            border: 3px solid $ringColor;
-            width: (0.77*$size);
-            height: (0.77*$size);
-            box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
-        }
-
-        .pie {
-            position: absolute;
-            left: (0.05*$size);
-            top: (0.07*$size);
-            width: (0.90*$size);
-            height: (0.90*$size);
-            border-radius: 50%;
-            border: 5.5px solid $frameColor;
-            box-shadow: 0 0 (0.03*$size) 0 $ringColor;
-        }
-
-        @-webkit-keyframes pressure {
-            0% {
-                top: 0px;
-            }
-
-            2% {
-                top: (0.05*$size);
-            }
-
-            4% {
-                top: 0px;
-            }
-        }
-
-        @keyframes pressure {
-            0% {
-                top: 0px;
-            }
-
-            2% {
-                top: (0.05*$size);
-            }
-
-            4% {
-                top: 0px;
-            }
-        }
-    }
-
     .hb_object_time .clock_icon {
-        width: 58px;
-        padding: 16px 8px 14px 8px;
         margin: 0;
     }
 
@@ -1147,6 +1068,7 @@ $size: 62px;
             width: 60px;
         }
     }
+
     .hb_object_time .clock_icon {
         width: 60px;
         padding: 13px 10px 13px 8px;
@@ -1156,21 +1078,25 @@ $size: 62px;
         -webkit-transform: translateY(3px);
         transform: translateY(3px);
     }
+
     .hb_lesson_time {
         padding: 12px 3vw 8px;
         min-width: 70vw;
         text-align: center;
     }
-    .hb_lesson_time > div{
+
+    .hb_lesson_time>div {
         justify-content: center;
     }
-    .hb_close{
+
+    .hb_close {
         margin-right: 12px;
     }
 
 }
-@media(max-width: 399px){
-    
+
+@media(max-width: 399px) {
+
     .hb_lesson_time {
         min-width: 65vw;
     }
