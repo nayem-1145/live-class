@@ -562,19 +562,19 @@ $size: 62px;
             animation-iteration-count: infinite;
         }
 
-        box-shadow: 0 0 (0.02*$size) 0 $ringColor;
+        box-shadow: 0 0 1px 0 $ringColor;
     }
 
     .ring {
         position: absolute;
         top: 7.52px;
-        left: 6.3px;
+        left: 6.9px;
         border: 4.5px solid $ringColor;
-        width: (0.79*$size);
-        height: (0.79*$size);
+        width: (0.78*$size);
+        height: (0.78*$size);
         border-radius: 50%;
         z-index: 500;
-        box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
+        box-shadow: inset 0 0 1px 0 $ringColor;
     }
 
     .pie {
@@ -585,7 +585,7 @@ $size: 62px;
         height: (0.90*$size);
         border-radius: 50%;
         border: 7px solid $frameColor;
-        box-shadow: 0 0 (0.03*$size) 0 $ringColor;
+        box-shadow: 0 0 2px 0 $ringColor;
     }
 
     .pie:before {
@@ -774,12 +774,11 @@ $size: 62px;
             align-items: center;
 
             h3 {
-                font-size: 1.28vw;
+                font-size: 1.18vw;
             }
 
             p {
                 font-size: 0.85vw;
-                width: 38vw;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -894,11 +893,11 @@ $size: 62px;
         .ring {
             position: absolute;
             top: 5.53px;
-            left: 4.95px;
-            border: 3px solid $ringColor;
+            left: 4.8px;
+            border: 2.6px solid $ringColor;
             width: (0.73*$size);
             height: (0.73*$size);
-            box-shadow: inset 0 0 (0.03*$size) 0 $ringColor;
+            box-shadow: inset 0 0 1.2px 0 $ringColor;
         }
 
         .pie {
@@ -908,8 +907,8 @@ $size: 62px;
             width: (0.90*$size);
             height: (0.90*$size);
             border-radius: 50%;
-            border: 5.5px solid $frameColor;
-            box-shadow: 0 0 (0.03*$size) 0 $ringColor;
+            border: 4px solid $frameColor;
+            box-shadow: 0 0 1.2px 0 $ringColor;
         }
 
         @-webkit-keyframes pressure {
@@ -982,7 +981,7 @@ $size: 62px;
 
     #stopwatch {
         .pie {
-            border: 5px solid slategrey;
+            border: 4px solid slategrey;
         }
     }
 
